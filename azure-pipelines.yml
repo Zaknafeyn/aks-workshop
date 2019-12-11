@@ -25,6 +25,7 @@ stages:
         inputs:
           containerRegistry: 'test'
           command: 'buildAndPush'
+          repository: 'Backend'
           Dockerfile: '**/Dockerfile'
     
       # - task: Docker@3
