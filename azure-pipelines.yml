@@ -2,7 +2,8 @@
 
 
 trigger:
-- master
+- master 
+- azure-pipelines
 
 resources:
 - repo: self
@@ -24,7 +25,7 @@ stages:
         inputs:
           containerRegistry: 'test'
           command: 'buildAndPush'
-          Dockerfile: '**/frontend/Dockerfile'
+          Dockerfile: '**/Dockerfile'
     
       # - task: Docker@3
       #   inputs:
