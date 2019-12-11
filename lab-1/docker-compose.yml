@@ -1,0 +1,16 @@
+version: "3"
+services:
+  backend:
+    build: ./Backend
+    container_name: backend
+    restart: always
+    ports:
+      - 9090:80
+  frontend:
+    build: ./Frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - 9080:80
+    depends_on:
+      - backend
